@@ -107,56 +107,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
     void valorCores(){
-        tvRed.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                sbRed.setProgress(vermelho);
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-        tvGreen.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                sbGreen.setProgress(verde);
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-        tvBlue.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int novoValor) {
-                sbBlue.setProgress(azul);
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
         tvRed.setText("Valor do Vermelho: " + vermelho);
         tvGreen.setText("Valor do Verde: " + verde);
         tvBlue.setText("Valor do Azul: " + azul);
@@ -166,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
      corAleatoria();
      int cores = Color.rgb(vermelho,verde,azul);
      viewColors.setBackgroundColor(cores);
+     sbRed.setProgress(vermelho);
+     sbGreen.setProgress(verde);
+     sbBlue.setProgress(azul);
 
     }
     void corAleatoria(){
